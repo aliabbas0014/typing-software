@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./pages/Footer";
 import "bootstrap/dist/css/bootstrap.css";
@@ -17,23 +17,18 @@ function App() {
 
 function AppWithFooterControl() {
   const location = useLocation();
-  
-  // Check if the current path is "/start", if so, don't show the footer
-  const showFooter = location.pathname !== '/start';
+  const showFooter = location.pathname !== "/start";
 
   return (
-     
     <div>
-<Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/start" element={<TypingTest/>} />
+        <Route path="/start" element={<TypingTest />} />
         <Route path="/about" element={<About />} />
       </Routes>
-
-      {showFooter && <Footer />} {/* Footer will not be shown on "/start" */}
+      {showFooter && <Footer />}
     </div>
-  
   );
 }
 

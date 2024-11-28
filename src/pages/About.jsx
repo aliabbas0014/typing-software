@@ -131,7 +131,7 @@ const About = () => {
           <p className="text-white mb-4">
             Whether you're a beginner or aiming for speed mastery, AlphaTyper helps you every step of the way.
           </p>
-          <a href="/start" className="btn btn-warning btn-lg">
+          <a href="#/start" className="btn btn-warning btn-lg">
             Start Typing Now
           </a>
         </div>

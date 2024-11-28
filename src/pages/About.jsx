@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaKeyboard, FaInfoCircle, FaUser } from "react-icons/fa"; // Import icons from react-icons
 
 const About = () => {
@@ -131,9 +132,10 @@ const About = () => {
           <p className="text-white mb-4">
             Whether you're a beginner or aiming for speed mastery, AlphaTyper helps you every step of the way.
           </p>
-          <a href="#/start" className="btn btn-warning btn-lg">
-            Start Typing Now
-          </a>
+          <Link to="/start" className="btn btn-warning btn-lg ">
+                Start Typing Now
+              </Link>
+          
         </div>
       </section>
 
